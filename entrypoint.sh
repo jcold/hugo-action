@@ -10,4 +10,4 @@ chmod 600 ~/.ssh/id_rsa
 ssh-keyscan -p 11022 ${INPUT_SERVER_ADDR} >> ~/.ssh/known_hosts
 
 # exec "$@"
-sh -c "echo $*"
+sh -c "$*"
