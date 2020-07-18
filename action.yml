@@ -1,24 +1,23 @@
-name: 'Tencent COS Action'
-description: 'GitHub Action for Tencent COS Command'
+name: 'Publish hugo result'
+description: 'Build and publish file to remote server'
 author: 'Dayu <jcoldyu@gmail.com>'
 branding:
   name: 'godayu'
 inputs:
-  args:
-    description: 'COSCMD args'
+  PUBLISH-SCRIPT:
+    description: 'Publish script'
     required: true
-  secret_id:
-    description: 'Tencent cloud SecretId'
+  SERVER-KEY:
+    description: 'Remove server private key'
     required: true
-  secret_key:
-    description: 'Tencent cloud SecretKey'
+  AK:
+    description: 'Qiniu ak'
     required: true
-  bucket:
-    description: 'COS bucket name'
-    required: true
-  region:
-    description: 'COS bucket region'
+  SK:
+    description: 'Qiniu sk'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.publish-script }}
