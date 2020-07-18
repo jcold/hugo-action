@@ -4,11 +4,14 @@ author: 'Dayu <jcoldyu@gmail.com>'
 branding:
   name: 'godayu'
 inputs:
-  PUBLISH-SCRIPT:
+  PUBLISH_SCRIPT:
     description: 'Publish script'
     required: true
-  SERVER-KEY:
+  SERVER_KEY:
     description: 'Remove server private key'
+    required: true
+  SERVER_ADDR:
+    description: 'Remove server addr'
     required: true
   AK:
     description: 'Qiniu ak'
