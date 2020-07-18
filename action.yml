@@ -1,0 +1,24 @@
+name: 'Tencent COS Action'
+description: 'GitHub Action for Tencent COS Command'
+author: 'Dayu <jcoldyu@gmail.com>'
+branding:
+  name: 'godayu'
+inputs:
+  args:
+    description: 'COSCMD args'
+    required: true
+  secret_id:
+    description: 'Tencent cloud SecretId'
+    required: true
+  secret_key:
+    description: 'Tencent cloud SecretKey'
+    required: true
+  bucket:
+    description: 'COS bucket name'
+    required: true
+  region:
+    description: 'COS bucket region'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
