@@ -2,7 +2,7 @@
 
 set -e
 
-qshell account ${QINIU_AK} ${QINIU_SK} dayu
+qshell account ${AK} ${SK} dayu
 
 mkdir -p ~/.ssh/
 echo "$SERVER_KEY" > ~/.ssh/id_rsa
