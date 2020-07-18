@@ -3,6 +3,8 @@
 set -e
 
 qshell account ${INPUT_AK} ${INPUT_SK} dayu
+qshell user ls
+env
 
 mkdir -p ~/.ssh/
 echo "${INPUT_SERVER_KEY}" > ~/.ssh/id_rsa
